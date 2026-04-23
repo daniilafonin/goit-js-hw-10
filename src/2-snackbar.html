@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .snackbar-page {
+        padding-top: 36px;
+      }
+
+      .form {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .form > label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2e2f42;
+      }
+
+      .form input[type='number'] {
+        height: 40px;
+        border: 1px solid #808080;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .form input[type='number']:hover {
+        border-color: #000;
+      }
+
+      .form input[type='number']:focus {
+        outline: none;
+        border-color: #4e75ff;
+      }
+
+      fieldset {
+        border: 1px solid #808080;
+        border-radius: 4px;
+        margin: 0;
+        padding: 14px 16px 8px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      fieldset:hover {
+        border-color: #000;
+      }
+
+      legend {
+        padding: 0 4px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      fieldset label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .form button {
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #fff;
+        background-color: #4e75ff;
+      }
+
+      .form button:hover {
+        background-color: #6c8cff;
+      }
+    </style>
+  </head>
+  <body>
+    <load
+      src="./partials/header.html"
+      icon-path="./img/sprite.svg#logo"
+      highlight-curr="active"
+    />
+
+    <main>
+      <div class="container snackbar-page">
+        <load src="./partials/back-link.html" />
+
+        <form class="form">
+          <label>
+            Delay (ms)
+            <input type="number" name="delay" min="0" step="1" required />
+          </label>
+
+          <fieldset>
+            <legend>State</legend>
+            <label>
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+            <label>
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button type="submit">Create notification</button>
+        </form>
+      </div>
+    </main>
+
+    <load src="./partials/footer.html" />
+    <script type="module" src="./js/2-snackbar.js"></script>
+  </body>
+</html>
