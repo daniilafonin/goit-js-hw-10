@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <style>
+      .timer-page {
+        padding-top: 36px;
+      }
+
+      .timer-controls {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 32px;
+      }
+
+      #datetime-picker {
+        width: 272px;
+        height: 40px;
+        border: 1px solid #808080;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2e2f42;
+      }
+
+      #datetime-picker:hover {
+        border-color: #000;
+      }
+
+      #datetime-picker:disabled {
+        color: #808080;
+        border-color: #808080;
+        background-color: #fafafa;
+      }
+
+      [data-start] {
+        min-width: 75px;
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #fff;
+        background-color: #4e75ff;
+      }
+
+      [data-start]:hover:not(:disabled) {
+        background-color: #6c8cff;
+      }
+
+      [data-start]:disabled {
+        color: #989898;
+        background-color: #cfcfcf;
+      }
+
+      .timer {
+        display: flex;
+        gap: 24px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .value {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+      }
+
+      .label {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2e2f42;
+        text-transform: uppercase;
+      }
+    </style>
+    <script type="module" crossorigin src="/goit-js-hw-10/1-timer.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-DD3qoKza.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+  </head>
+  <body>
+    <main class="container timer-page">
+      <div class="timer-controls">
+        <input type="text" id="datetime-picker" />
+        <button type="button" data-start>Start</button>
+      </div>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

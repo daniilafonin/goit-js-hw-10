@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar</title>
+    <style>
+      .snackbar-page {
+        padding-top: 36px;
+      }
+
+      .form {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .form > label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2e2f42;
+      }
+
+      .form input[type='number'] {
+        height: 40px;
+        border: 1px solid #808080;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .form input[type='number']:hover {
+        border-color: #000;
+      }
+
+      .form input[type='number']:focus {
+        outline: none;
+        border-color: #4e75ff;
+      }
+
+      fieldset {
+        border: 1px solid #808080;
+        border-radius: 4px;
+        margin: 0;
+        padding: 14px 16px 8px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      fieldset:hover {
+        border-color: #000;
+      }
+
+      legend {
+        padding: 0 4px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      fieldset label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .form button {
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #fff;
+        background-color: #4e75ff;
+      }
+
+      .form button:hover {
+        background-color: #6c8cff;
+      }
+    </style>
+    <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-DD3qoKza.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="/goit-js-hw-10/assets/sprite-E8vg0sBb.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="./1-timer.html">Timer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./2-snackbar.html"
+            >Snackbar</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main>
+      <div class="container snackbar-page">
+        <a class="back-link" href="./index.html">Go back</a>
+
+
+        <form class="form">
+          <label>
+            Delay (ms)
+            <input type="number" name="delay" min="0" step="1" required />
+          </label>
+
+          <fieldset>
+            <legend>State</legend>
+            <label>
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+            <label>
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button type="submit">Create notification</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <p class="footer-desc">
+      Made with ✨ by
+      <a
+        class="footer-link"
+        href="https://goit.global/ua/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GoIT team
+      </a>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
